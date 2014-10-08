@@ -1,0 +1,12 @@
+= simple_form_for(@location) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :depot_id
+    = f.input :block
+    = f.input :column
+    = f.input :level
+    = f.input :mixed
+
+  .form-actions
+    = f.button :submit

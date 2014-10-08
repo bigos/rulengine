@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Depot:
+  = @location.depot_id
+%p
+  %b Block:
+  = @location.block
+%p
+  %b Column:
+  = @location.column
+%p
+  %b Level:
+  = @location.level
+%p
+  %b Mixed:
+  = @location.mixed
+
+= link_to 'Edit', edit_location_path(@location)
+\|
+= link_to 'Back', locations_path
