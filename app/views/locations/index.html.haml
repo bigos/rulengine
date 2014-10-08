@@ -1,0 +1,27 @@
+%h1 Listing locations
+
+%table
+  %tr
+    %th Depot
+    %th Block
+    %th Column
+    %th Level
+    %th Mixed
+    %th
+    %th
+    %th
+
+  - @locations.each do |location|
+    %tr
+      %td= location.depot_id
+      %td= location.block
+      %td= location.column
+      %td= location.level
+      %td= location.mixed
+      %td= link_to 'Show', location
+      %td= link_to 'Edit', edit_location_path(location)
+      %td= link_to 'Destroy', location, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Location', new_location_path
