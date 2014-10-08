@@ -36,5 +36,31 @@ gem 'spring',        group: :development
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
+gem 'jquery-ui-rails'
+gem 'simple_form'
+gem 'factory_girl_rails'
+
+group :development do
+  # this gem silences asset logging
+  gem 'quiet_assets'
+  # more info at: https://github.com/bbatsov/rubocop
+  # example use: $ rubocop ./app/models/product.rb
+  gem 'rubocop', require: false
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
+
+gem "haml-rails"
+gem 'bootstrap-sass', '~> 3.1.1.0'
